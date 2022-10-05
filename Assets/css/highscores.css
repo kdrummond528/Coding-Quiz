@@ -5,22 +5,8 @@ body {
     margin: 10px;
 }
 
-.view-highscores {
-    text-align: left;
-    font-size: 14px;
-}
-
-.view-highscores a {
-    color: rgb(236, 102, 236);
-    text-decoration: none;
-}
-
-.timer {
-    text-align: right;
-    font-size: 14px;
-}
-
-.start-btn button {
+.go-back button,
+.clear button {
     border-radius: 5px;
     background-color: rgb(101, 1, 101);
     color: white;
@@ -31,6 +17,7 @@ body {
     cursor: pointer;
 }
 
-.start-btn button:hover {
+.go-back button:hover,
+.clear button:hover {
     background-color: rgb(236, 102, 236);
 }

@@ -22,4 +22,5 @@ This following screenshots show the appearance of my personal porfolio:
 ![quiz-screenshot](./Assets/question5.png)
 
 ## Links to the Coding Quiz:
+https://github.com/kdrummond528/Coding-Quiz.git
 git@github.com:kdrummond528/Coding-Quiz.git

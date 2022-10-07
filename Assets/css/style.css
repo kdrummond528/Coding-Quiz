@@ -20,7 +20,7 @@ body {
     font-size: 14px;
 }
 
-.start-btn button {
+#start-btn button {
     border-radius: 5px;
     background-color: rgb(101, 1, 101);
     color: white;
@@ -31,6 +31,6 @@ body {
     cursor: pointer;
 }
 
-.start-btn button:hover {
+#start-btn button:hover {
     background-color: rgb(236, 102, 236);
 }

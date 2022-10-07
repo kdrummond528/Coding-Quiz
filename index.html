@@ -16,8 +16,8 @@
 
         <!-- timer -->
         <div class="timer">
-            <div class="time-text">Time:</div>
-            <div class="timer-sec">0</div>
+            <div class="timer-text">Time:</div>
+            <div class="timer-count">0</div>
         </div>
         <div class="timeline"></div>
     </header>
@@ -31,13 +31,18 @@
             <p>Try to answer the following code-related questions within the time limit.
                 Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
 
-            <div class="start-btn"><button class="startquiz">Start Quiz</button></div>
+            <div id="start-btn"><button class="startquiz">Start Quiz</button></div>
 
         </div>
 
         <div id="questions" class="hide">
             <h2 id="question-title"></h2>
-            <div id="choices" class="choices"></div>
+            <div id="choices" class="choices">
+                <button id="answer1"></button>
+                <button id="answer2"></button>
+                <button id="answer3"></button>
+                <button id="answer4"></button>
+            </div>
         </div>
 
         <div id="end-screen" class="hide">

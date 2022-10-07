@@ -8,10 +8,12 @@ Unforuntately, I ran out of time and was unable to code some of the remaining Ja
 
 ## Mock-up:
 The following animation shows what the intended functionality and appearance of the Coding Quiz is:
+
 ![mock-up](./Assets/04-web-apis-homework-demo.gif)
 
 ## Actual Coding Quiz:
 This following screenshots show the appearance of my personal porfolio:
+
 ![quiz-screenshot](./Assets/homescreen.png)
 ![quiz-screenshot](./Assets/question1.png)
 ![quiz-screenshot](./Assets/question2.png)
@@ -20,4 +22,4 @@ This following screenshots show the appearance of my personal porfolio:
 ![quiz-screenshot](./Assets/question5.png)
 
 ## Links to the Coding Quiz:
-
+git@github.com:kdrummond528/Coding-Quiz.git

@@ -6,12 +6,23 @@ var timer;
 var currentQuestion = 0;
 var scoreTotal = 100;
 var timerCount = 60;
+var choicesList;
+var endScreen;
 
 // variables to reference DOM elements
 var questionsEl = document.getElementById('questions');
 var startBtn = document.getElementById('start-btn');
 
 console.log(startBtn);
+
+    // hide end screen
+    var endScreen = document.getElementById("end-screen");
+    endScreen.style.display = "none";
+
+    // hide choices
+    var choicesList = document.getElementById("choices");
+    choicesList.style.display = "none";
+
 
 // function to start the quiz
 function startQuiz() {
@@ -25,6 +36,10 @@ function startQuiz() {
     // un-hide questions section
     var questionsToAsk = document.getElementById("questions");
     questionsToAsk.style.display = "block";
+
+    // un-hide choices
+    var choicesList = document.getElementById("choices");
+    choicesList.style.display = "block";
 
     // start timer
  timer=setInterval(function(){
@@ -43,20 +58,16 @@ function getQuestion() {
     // get current question object from array
     var question=questions[currentQuestion]
     console.log(question.title);
+
     // update title with current question
     document.getElementById("question-title").textContent = question.title;
+
     // clear out any old question choices
     document.getElementById("answer1").textContent = question.choices[0];
     document.getElementById("answer2").textContent = question.choices[1];
     document.getElementById("answer3").textContent = question.choices[2];
     document.getElementById("answer4").textContent = question.choices[3];
-    // loop over choices
-    // create new button for each choice
-    // // display on the page
-    // for (let index = 0; index < question.choices.length; index++) {
-    //     const answer = question.choices[index];
-    //     document.getElementById("question-title").textContent = question.title;
-    // }
+
 }
 
 
@@ -64,26 +75,29 @@ function getQuestion() {
 function checkQuestion(event) {
     
     // if the clicked element is not a choice button, do nothing.
-    if (something) {
+    // if (something) {
 
-    }
+    // }
 
-    if (something) {
-        // check if user guessed wrong
-        //penalize time 10 seconds
+    // if (something) {
+    //     // check if user guessed wrong
 
-        // display new time on page
+    //     // penalize time by 10 seconds
 
-        // give them feedback, letting them know it's wrong
-    } else {
-        // give them feedback letting them know it's right
-    }
+    //     // display new time on page
+
+    //     // give them feedback, letting them know it's wrong
+
+    // } else {
+    //     // give them feedback letting them know it's right
+    // }
 
     // flash right/wrong feedback on page for a short period of time
 
     // move to next question
     currentQuestion++
     getQuestion()
+
     // check if we've run out of questions
     // if so, end the quiz
     // else, get the next question
@@ -94,17 +108,26 @@ document.getElementById("answer2").addEventListener("click",checkQuestion)
 document.getElementById("answer3").addEventListener("click",checkQuestion) 
 document.getElementById("answer4").addEventListener("click",checkQuestion)
 
+    // hide questions section
+    var questionsToAsk = document.getElementById("questions");
+    questionsToAsk.style.display = "none";
+    
+    // hide choices
+    var choicesList = document.getElementById("choices");
+    choicesList.style.display = "none";
+
 // function to end the quiz
 function quizEnd() {
     // stop timer
     if (timerCount === 0) {
         clearInterval(timer);
     }
-    // show end screen
-
+    // // show end screen
+    var endScreen = document.getElementById("end-screen");
+    endScreen.style.display = "block";
+    
     // show final score
 
-    // hide questions section
 }
 
 // function for updating the time

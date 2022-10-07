@@ -34,3 +34,21 @@ body {
 #start-btn button:hover {
     background-color: rgb(236, 102, 236);
 }
+
+#choices button {
+    display: block;
+    align-content: center;
+    border-radius: 5px;
+    margin: 10px;
+    background-color: rgb(101, 1, 101);
+    color: white;
+    padding: 5px 10px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+#choices button:hover {
+    background-color: rgb(236, 102, 236);
+}

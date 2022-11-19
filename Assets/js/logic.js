@@ -12,7 +12,7 @@ var endScreen;
 // variables to reference DOM elements
 var questionsEl = document.getElementById('questions');
 var startBtn = document.getElementById('start-btn');
-var feedBack = document.getElementById('feedback');
+// var feedBack = document.getElementById('feedback');
 
 // hide end screen
 var endScreen = document.getElementById("end-screen");
@@ -22,11 +22,15 @@ endScreen.style.display = "none";
 var choicesList = document.getElementById("choices");
 choicesList.style.display = "none";
 
+// hide questions section
+var questionsToAsk = document.getElementById("questions");
+questionsToAsk.style.display = "none";
+
 
 // function to start the quiz
 function startQuiz() {
 
-    console.log("start quiz");
+    console.log("Quiz started!");
 
     // hide start screen
     var startScreen = document.getElementById("start-screen");
@@ -40,17 +44,12 @@ function startQuiz() {
     var choicesList = document.getElementById("choices");
     choicesList.style.display = "block";
 
-    // hide feedback 
-    var feedBack = document.getElementById('feedback');
-    feedBack.style.display = "none";
-
     // start timer
-    timer=setInterval(function(){
-    var timerEl=document.querySelector(".timer-count")
-    timerEl.textContent=timerCount
-    timerCount--
-    },1000)
-
+ timer=setInterval(function(){
+var timerEl=document.querySelector(".timer-count")
+timerEl.textContent=timerCount
+timerCount--
+},1000)
     // show starting time
 
     getQuestion(currentQuestion);
@@ -58,11 +57,10 @@ function startQuiz() {
 
 startBtn.addEventListener("click", startQuiz)
 
-// function to get/show each question
+// function to show questions/choices
 function getQuestion() {
     // get current question object from array
-    var question = questions[currentQuestion]
-    console.log(question.title);
+    var question=questions[currentQuestion]
 
     // update title with current question
     document.getElementById("question-title").textContent = question.title;
@@ -72,27 +70,29 @@ function getQuestion() {
     document.getElementById("answer2").textContent = question.choices[1];
     document.getElementById("answer3").textContent = question.choices[2];
     document.getElementById("answer4").textContent = question.choices[3];
-
 }
 
+document.getElementById("answer1").addEventListener("click",checkQuestion) 
+document.getElementById("answer2").addEventListener("click",checkQuestion) 
+document.getElementById("answer3").addEventListener("click",checkQuestion) 
+document.getElementById("answer4").addEventListener("click",checkQuestion)
 
 // function for clicking a question
 function checkQuestion(event) {
-    // check if user guessed right
-    if (choices.correct === true) {
-         
 
-    }
+    // if the clicked element is not a choice button, do nothing.
+    // if (something) {}
 
-    if (wrong) {
-        // check if user guessed wrong
-        
-        // penalize time by 10 seconds
-        timerCount -=10
-        // display new time on page
+    // check if user is wrong
+    // if (something) {
+    //    
 
-        // give them feedback, letting them know it's wrong
-    }
+    //     // penalize time by 10 seconds
+
+    //     // display new time on page
+
+    //     // give them feedback, letting them know it's wrong
+
     // } else {
     //     // give them feedback letting them know it's right
     // }
@@ -105,21 +105,11 @@ function checkQuestion(event) {
 
     // check if we've run out of questions
     // if so, end the quiz
-    // else, get the next question
+    if (currentQuestion > 4 ) {
+        quizEnd();
+    }
+
 }
-
-document.getElementById("answer1").addEventListener("click",checkQuestion) 
-document.getElementById("answer2").addEventListener("click",checkQuestion) 
-document.getElementById("answer3").addEventListener("click",checkQuestion) 
-document.getElementById("answer4").addEventListener("click",checkQuestion)
-
-    // hide questions section
-    var questionsToAsk = document.getElementById("questions");
-    questionsToAsk.style.display = "none";
-    
-    // hide choices
-    var choicesList = document.getElementById("choices");
-    choicesList.style.display = "none";
 
 // function to end the quiz
 function quizEnd() {
@@ -131,8 +121,20 @@ function quizEnd() {
     var endScreen = document.getElementById("end-screen");
     endScreen.style.display = "block";
     
-    // show final score
+    // hide start screen
+    var startScreen = document.getElementById("start-screen");
+    startScreen.style.display = "none";
 
+    // hide questions section
+    var questionsToAsk = document.getElementById("questions");
+    questionsToAsk.style.display = "none";
+
+    // hide choices
+    var choicesList = document.getElementById("choices");
+    choicesList.style.display = "none"; 
+
+    // show final score
+    
 }
 
 // function for updating the time
@@ -145,6 +147,7 @@ function clockTick() {
     }
 }
 
+// function for saving the scores
 function saveHighscore() {
     // get value of input box - for initials
 

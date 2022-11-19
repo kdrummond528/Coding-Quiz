@@ -24,5 +24,10 @@ var questions = [
         title: 'A very use debugging tool used during development and debugging for printing content to the debugger is:',
         choices: ['1. Javascript', '2. terminal / bash', '3. for loops', '4. console.log'],
         answer: '4. console.log'
+    },
+    {
+        title: 'A very use debugging tool used during development and debugging for printing content to the debugger is:',
+        choices: ['1. Javascript', '2. terminal / bash', '3. for loops', '4. console.log'],
+        answer: '4. console.log'
     }
 ];

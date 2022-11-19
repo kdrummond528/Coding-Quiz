@@ -12,16 +12,15 @@ var endScreen;
 // variables to reference DOM elements
 var questionsEl = document.getElementById('questions');
 var startBtn = document.getElementById('start-btn');
+var feedBack = document.getElementById('feedback');
 
-console.log(startBtn);
+// hide end screen
+var endScreen = document.getElementById("end-screen");
+endScreen.style.display = "none";
 
-    // hide end screen
-    var endScreen = document.getElementById("end-screen");
-    endScreen.style.display = "none";
-
-    // hide choices
-    var choicesList = document.getElementById("choices");
-    choicesList.style.display = "none";
+// hide choices
+var choicesList = document.getElementById("choices");
+choicesList.style.display = "none";
 
 
 // function to start the quiz
@@ -41,22 +40,28 @@ function startQuiz() {
     var choicesList = document.getElementById("choices");
     choicesList.style.display = "block";
 
+    // hide feedback 
+    var feedBack = document.getElementById('feedback');
+    feedBack.style.display = "none";
+
     // start timer
- timer=setInterval(function(){
-var timerEl=document.querySelector(".timer-count")
-timerEl.textContent=timerCount
-timerCount--
-},1000)
+    timer=setInterval(function(){
+    var timerEl=document.querySelector(".timer-count")
+    timerEl.textContent=timerCount
+    timerCount--
+    },1000)
+
     // show starting time
 
     getQuestion(currentQuestion);
 }
+
 startBtn.addEventListener("click", startQuiz)
 
 // function to get/show each question
 function getQuestion() {
     // get current question object from array
-    var question=questions[currentQuestion]
+    var question = questions[currentQuestion]
     console.log(question.title);
 
     // update title with current question
@@ -73,21 +78,21 @@ function getQuestion() {
 
 // function for clicking a question
 function checkQuestion(event) {
-    
-    // if the clicked element is not a choice button, do nothing.
-    // if (something) {
+    // check if user guessed right
+    if (choices.correct === true) {
+         
 
-    // }
+    }
 
-    // if (something) {
-    //     // check if user guessed wrong
+    if (wrong) {
+        // check if user guessed wrong
+        
+        // penalize time by 10 seconds
+        timerCount -=10
+        // display new time on page
 
-    //     // penalize time by 10 seconds
-
-    //     // display new time on page
-
-    //     // give them feedback, letting them know it's wrong
-
+        // give them feedback, letting them know it's wrong
+    }
     // } else {
     //     // give them feedback letting them know it's right
     // }

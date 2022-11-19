@@ -1,28 +1,28 @@
 // list of questions, choices, and correct answers
 var questions = [
     {
-        title: '1. Commonly used data types DO NOT include: ',
-        choices: ['a. strings', 'b. booleans', 'c. alerts', 'd. numbers'],
-        answer: 'c. alerts'
+        title: 'Commonly used data types DO NOT include: ',
+        choices: ['1. strings', '2. booleans', '3. alerts', '4. numbers'],
+        answer: '3. alerts'
     },
     {
-        title: '2. The condition in an if / else statement is enclosed with ___________ .',
-        choices: ['a. quotes', 'b. curly brackets', 'c. parenthesis', 'd. square brackets'],
-        answer: 'c. parenthesis'
+        title: 'The condition in an if / else statement is enclosed with ___________ .',
+        choices: ['1. quotes', '2. curly brackets', '3. parenthesis', '4. square brackets'],
+        answer: '3. parenthesis'
     },
     {
-        title: '3. Arrays in JavaScript can be used to store ____________ .',
-        choices: ['a. numbers and strings', 'b. other arrays', 'c. booleans', 'd. all of the above'],
-        answer: 'd. all of the above'
+        title: 'Arrays in JavaScript can be used to store ____________ .',
+        choices: ['1. numbers and strings', '2. other arrays', '3. booleans', '4. all of the above'],
+        answer: '4. all of the above'
     },
     {
-        title: '4. String values must be enclosed within _________ when being assigned to variable.',
-        choices: ['a. commas', 'b. curly brackets', 'c. quotes', 'd. parenthesis'],
-        answer: 'c. quotes'
+        title: 'String values must be enclosed within _________ when being assigned to variable.',
+        choices: ['1. commas', '2. curly brackets', '3. quotes', '4. parenthesis'],
+        answer: '3. quotes'
     },
     {
-        title: '5. A very use debugging tool used during development and debugging for printing content to the debugger is:',
-        choices: ['a. Javascript', 'b. terminal / bash', 'c. for loops', 'd. console.log'],
-        answer: 'd. console.log'
+        title: 'A very use debugging tool used during development and debugging for printing content to the debugger is:',
+        choices: ['1. Javascript', '2. terminal / bash', '3. for loops', '4. console.log'],
+        answer: '4. console.log'
     }
 ];

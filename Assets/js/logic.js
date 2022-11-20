@@ -51,6 +51,7 @@ var startBtn = document.getElementById('start-btn');
 // hide end screen
 var endScreen = document.getElementById("end-screen");
 endScreen.style.display = "none";
+var submitBtn = document.getElementById('submit');
 
 // hide choices
 var choicesList = document.getElementById("choices");
@@ -79,22 +80,20 @@ function startQuiz() {
     choicesList.style.display = "block";
 
     // start timer
- timer=setInterval(function(){
-var timerEl=document.querySelector(".timer-count")
-timerEl.textContent=timerCount
-timerCount--
-},1000)
+    timer = setInterval(function () {
+        var timerEl = document.querySelector(".timer-count")
+        timerEl.textContent = timerCount
+        timerCount--
+    }, 1000)
     // show starting time
 
     getQuestion(currentQuestion);
 }
 
-startBtn.addEventListener("click", startQuiz)
-
 // function to show questions/choices
 function getQuestion() {
     // get current question object from array
-    var question=questions[currentQuestion]
+    var question = questions[currentQuestion]
 
     // update title with current question
     document.getElementById("question-title").textContent = question.title;
@@ -106,11 +105,6 @@ function getQuestion() {
     document.getElementById("answer4").textContent = question.choices[3];
 }
 
-document.getElementById("answer1").addEventListener("click",checkQuestion) 
-document.getElementById("answer2").addEventListener("click",checkQuestion) 
-document.getElementById("answer3").addEventListener("click",checkQuestion) 
-document.getElementById("answer4").addEventListener("click",checkQuestion)
-
 // function for clicking a question
 function checkQuestion(event) {
 
@@ -119,24 +113,24 @@ function checkQuestion(event) {
     if (element.matches("button") === true) {
         var userChoice = element.getAttribute("data");
     }
-    
+
     // if (something) {}
 
     // check if user is wrong
-    if (userChoice === choices.answer ) {
-     // show feedback
-    var feedBack = document.getElementById("feedback");
-    feedBack.style.display = "block";
-    feedBack.innerHTML = 'Correct!'
+    if (userChoice === choices.answer) {
+        // show feedback
+        var feedBack = document.getElementById("feedback");
+        feedBack.style.display = "block";
+        feedBack.innerHTML = 'Correct!'
 
-    // penalize time by 10 seconds
+        // penalize time by 10 seconds
 
-    // display new time on page
+        // display new time on page
 
-    // give them feedback, letting them know it's wrong
+        // give them feedback, letting them know it's wrong
 
-    } 
-    
+    }
+
     // else {
     //     // give them feedback letting them know it's right
     // }
@@ -148,7 +142,7 @@ function checkQuestion(event) {
     getQuestion()
 
     // check if we've run out of questions, if so, end the quiz
-    if (currentQuestion > 4 ) {
+    if (currentQuestion > 4) {
         quizEnd();
     }
 
@@ -164,7 +158,7 @@ function quizEnd() {
     // show end screen
     var endScreen = document.getElementById("end-screen");
     endScreen.style.display = "block";
-    
+
     // hide start screen
     var startScreen = document.getElementById("start-screen");
     startScreen.style.display = "none";
@@ -175,16 +169,16 @@ function quizEnd() {
 
     // hide choices
     var choicesList = document.getElementById("choices");
-    choicesList.style.display = "none"; 
+    choicesList.style.display = "none";
 
     // show final score
-    
+
 }
 
 // function for updating the time
 function clockTick() {
     // update time
-    
+
     // check if user ran out of time
     if (timerCount === 0) {
         clearInterval(timer);
@@ -193,21 +187,37 @@ function clockTick() {
 
 // function for saving the scores
 function saveHighscore() {
-    // get value of input box - for initials
-
+    // get value of input box for initials and ending score
+    var initials = document.getElementById('initials').value;
+    var endingScore = counter.innerHTML
     // make sure value wasn't empty
+    if (initials == '') {
+        alert('Please enter your initials.')
+        return null
+    }
     // get saved scores from localstorage, or if not any, set to empty array
-
     // format new score object for current user
-
+    var highScore = { init: initials, score: endingScore }
     // save to localstorage
-
+    var scoresStorage = JSON.parse(localStorage.getItem("scoresStorage"));
+    if (scoresStorage !== null) {
+        scoresStorage.push(highScore);
+        localStorage.setItem("scoresStorage", JSON.stringify(highScore));
+    } else {
+        scoresStorage = [highScore];
+        localStorage.setItem("scoresStorage", JSON.stringify(scoresStorage));
+    }
     // redirect to next page
+    window.location.href = "./highscores.html";
 }
 
 // click events
-// user clicks button to submit initials
-
 // user clicks button to start quiz
- 
+startBtn.addEventListener("click", startQuiz)
+// user clicks button to submit initials
+submitBtn.addEventListener("click", saveHighscore)
 // user clicks on element containing choices
+document.getElementById("answer1").addEventListener("click", checkQuestion)
+document.getElementById("answer2").addEventListener("click", checkQuestion)
+document.getElementById("answer3").addEventListener("click", checkQuestion)
+document.getElementById("answer4").addEventListener("click", checkQuestion)

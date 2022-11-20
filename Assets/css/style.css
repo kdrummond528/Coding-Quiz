@@ -5,6 +5,7 @@ body {
     margin: 10px;
 }
 
+/* view high scores link */
 .view-highscores {
     text-align: left;
     font-size: 14px;
@@ -15,11 +16,13 @@ body {
     text-decoration: none;
 }
 
+/* timer  */
 .timer {
     text-align: right;
     font-size: 14px;
 }
 
+/* button to start quiz */
 #start-btn button {
     border-radius: 5px;
     background-color: rgb(101, 1, 101);
@@ -35,11 +38,13 @@ body {
     background-color: rgb(236, 102, 236);
 }
 
+/* questions placement */
 #questions {
     margin-right: 10%;
     margin-left: 10%;
 }
 
+/* answer choices button */
 #choices button {
     display: block;
     align-content: center;
@@ -54,6 +59,20 @@ body {
     cursor: pointer;
 }
 
-#choices button:hover {
+#choices button:hover,
+#submit:hover {
     background-color: rgb(236, 102, 236);
+}
+
+/* button to save highscores and initials  */
+#submit {
+    border-radius: 5px;
+    margin: 5px;
+    background-color: rgb(101, 1, 101);
+    color: white;
+    padding: 5px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    cursor: pointer;
 }

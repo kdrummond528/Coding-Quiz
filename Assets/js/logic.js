@@ -1,3 +1,37 @@
+// list of questions, choices, and correct answers
+var questions = [
+    {
+        title: 'Commonly used data types DO NOT include: ',
+        choices: ['1. strings', '2. booleans', '3. alerts', '4. numbers'],
+        answer: '3. alerts'
+    },
+    {
+        title: 'The condition in an if / else statement is enclosed with ___________ .',
+        choices: ['1. quotes', '2. curly brackets', '3. parenthesis', '4. square brackets'],
+        answer: '3. parenthesis'
+    },
+    {
+        title: 'Arrays in JavaScript can be used to store ____________ .',
+        choices: ['1. numbers and strings', '2. other arrays', '3. booleans', '4. all of the above'],
+        answer: '4. all of the above'
+    },
+    {
+        title: 'String values must be enclosed within _________ when being assigned to variable.',
+        choices: ['1. commas', '2. curly brackets', '3. quotes', '4. parenthesis'],
+        answer: '3. quotes'
+    },
+    {
+        title: 'A very use debugging tool used during development and debugging for printing content to the debugger is:',
+        choices: ['1. Javascript', '2. terminal / bash', '3. for loops', '4. console.log'],
+        answer: '4. console.log'
+    },
+    {
+        title: '',
+        choices: [''],
+        answer: ''
+    }
+];
+
 // variables to keep track of quiz state 
 // currentQuestion
 // time 
@@ -81,19 +115,29 @@ document.getElementById("answer4").addEventListener("click",checkQuestion)
 function checkQuestion(event) {
 
     // if the clicked element is not a choice button, do nothing.
+    var element = event.target;
+    if (element.matches("button") === true) {
+        var userChoice = element.getAttribute("data");
+    }
+    
     // if (something) {}
 
     // check if user is wrong
-    // if (something) {
-    //    
+    if (userChoice === choices.answer ) {
+     // show feedback
+    var feedBack = document.getElementById("feedback");
+    feedBack.style.display = "block";
+    feedBack.innerHTML = 'Correct!'
 
-    //     // penalize time by 10 seconds
+    // penalize time by 10 seconds
 
-    //     // display new time on page
+    // display new time on page
 
-    //     // give them feedback, letting them know it's wrong
+    // give them feedback, letting them know it's wrong
 
-    // } else {
+    } 
+    
+    // else {
     //     // give them feedback letting them know it's right
     // }
 
@@ -103,8 +147,7 @@ function checkQuestion(event) {
     currentQuestion++
     getQuestion()
 
-    // check if we've run out of questions
-    // if so, end the quiz
+    // check if we've run out of questions, if so, end the quiz
     if (currentQuestion > 4 ) {
         quizEnd();
     }
@@ -117,7 +160,8 @@ function quizEnd() {
     if (timerCount === 0) {
         clearInterval(timer);
     }
-    // // show end screen
+
+    // show end screen
     var endScreen = document.getElementById("end-screen");
     endScreen.style.display = "block";
     

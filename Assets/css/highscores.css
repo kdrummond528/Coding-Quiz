@@ -5,19 +5,20 @@ body {
     margin: 10px;
 }
 
-.go-back button,
-.clear button {
+#goback,
+#clear-hs {
     border-radius: 5px;
     background-color: rgb(101, 1, 101);
     color: white;
-    padding: 10px 20px;
+    padding: 5px 5px;
     font-size: 18px;
     outline: none;
     border: none;
     cursor: pointer;
 }
 
-.go-back button:hover,
-.clear button:hover {
-    background-color: rgb(236, 102, 236);
+#goback:hover,
+#clear-hs:hover {
+    /* background-color: rgb(236, 102, 236); */
+    opacity: 0.6;
 }

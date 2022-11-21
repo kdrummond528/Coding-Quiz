@@ -1,26 +1,52 @@
 # Coding-Quiz
-The objective of this challenge is to create timed coding quiz with multiple-choice questions. If the user gets an answer wrong they will be penalized by losing time off the clock. The test will end when either the user answers all questions or the timer reaches 0. At which point the user can save their initials and scores. 
+A timed coding quiz with multiple-choice questions.
 
-## Challenges making the Coding Quiz
-I faced many challenges making this quiz. So far in the bootcamp JavaScript has been more difficult for me to learn than HTML and CSS. It was a challenge to figure how to properly display the questions (titles, and answers) in order back to back, however I was able to code it correctly to do so. 
+## Table of Contents
+* [Description](#description)
+* [Future Development](#future-development)
+* [Mock-Up](#mock-up)
+* [My Coding Quiz](#my-coding-quiz)
+* [Links to the Coding Quiz](#links-to-the-coding-quiz)
+* [Questions](#questions)
 
-Unforuntately, I ran out of time and was unable to code some of the remaining JavaScript code such as the display of "right/wrong" for each answer choice selected, the end screen displaying at the end of the quiz including the ability to save the user's score, the penalization on time for wrong choices, etc.
+## Description
 
-## Mock-up:
+This application creates a timed coding quiz with multiple-choice questions. If the user gets an answer wrong they will be penalized by losing time off the clock. The test will end when either the user answers all questions or the timer reaches 0. At which point the user can save their initials with their score. 
+
+## Future Development
+
+As I continue working on this quiz I will include the functionality to save scores to local storage, include the timer penalization for incorrect answers, update the end screen with a value for the score, as well as the "correct/wrong" feedback after each answer choice is selected.
+
+## Mock-Up
 The following animation shows what the intended functionality and appearance of the Coding Quiz is:
 
 ![mock-up](./Assets/04-web-apis-homework-demo.gif)
 
-## Actual Coding Quiz:
-This following screenshots show the appearance of my personal porfolio:
+## My Coding Quiz:
+This following screenshots show the appearance of the Coding Quiz:
 
-![quiz-screenshot](./Assets/homescreen.png)
-![quiz-screenshot](./Assets/question1.png)
-![quiz-screenshot](./Assets/question2.png)
-![quiz-screenshot](./Assets/question3.png)
-![quiz-screenshot](./Assets/question4.png)
-![quiz-screenshot](./Assets/question5.png)
+![startscreen](./Assets/startscreen.png)
+![question1](./Assets/question1.png)
+![question2](./Assets/question2.png)
+![question3](./Assets/question3.png)
+![question4](./Assets/question4.png)
+![question5](./Assets/question5.png)
+![endscreen](./Assets/endscreen.png)
+![highscorespg](./Assets/highscorespg.png)
+
+Screen Recording [Video](https://drive.google.com/file/d/1J1Eh1fVU6pA4F0Lc_2L7wx10b2XbprSf/view) of my Coding Quiz.
 
 ## Links to the Coding Quiz:
-https://github.com/kdrummond528/Coding-Quiz.git
-git@github.com:kdrummond528/Coding-Quiz.git
+
+- [GitHub Repository](https://github.com/kdrummond528/Coding-Quiz.git)
+
+- [Deployed Application](https://kdrummond528.github.io/Coding-Quiz/)
+
+
+## Questions
+
+Feel free to [email me](mailto:k.drummond528@gmail.com) with any questions, comments, or requests.
+
+Checkout my [GitHub](https://github.com/kdrummond528)!
+
+View [My Portfolio](https://kdrummond528.github.io/Personal-Portfolio/)!

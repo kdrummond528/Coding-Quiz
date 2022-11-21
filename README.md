@@ -11,16 +11,22 @@ A timed coding quiz with multiple-choice questions.
 
 ## Description
 
-This application creates a timed coding quiz with multiple-choice questions. If the user gets an answer wrong they will be penalized by losing time off the clock. The test will end when either the user answers all questions or the timer reaches 0. At which point the user can save their initials with their score. 
+This application creates a timed coding quiz with multiple-choice questions. If the user gets an answer wrong they will be penalized by losing time off the clock. The test will end when either the user answers all questions or the timer reaches 0. At which point the user can save their initials with their score.
+
+[Back to top](#coding-quiz)
 
 ## Future Development
 
 As I continue working on this quiz I will include the functionality to save scores to local storage, include the timer penalization for incorrect answers, update the end screen with a value for the score, as well as the "correct/wrong" feedback after each answer choice is selected.
 
+[Back to top](#coding-quiz)
+
 ## Mock-Up
 The following animation shows what the intended functionality and appearance of the Coding Quiz is:
 
 ![mock-up](./Assets/04-web-apis-homework-demo.gif)
+
+[Back to top](#coding-quiz)
 
 ## My Coding Quiz:
 This following screenshots show the appearance of the Coding Quiz:
@@ -36,12 +42,16 @@ This following screenshots show the appearance of the Coding Quiz:
 
 Screen Recording [Video](https://drive.google.com/file/d/1J1Eh1fVU6pA4F0Lc_2L7wx10b2XbprSf/view) of my Coding Quiz.
 
+[Back to top](#coding-quiz)
+
 ## Links to the Coding Quiz:
 
 - [GitHub Repository](https://github.com/kdrummond528/Coding-Quiz.git)
 
 - [Deployed Application](https://kdrummond528.github.io/Coding-Quiz/)
 
+
+[Back to top](#coding-quiz)
 
 ## Questions
 
@@ -50,3 +60,5 @@ Feel free to [email me](mailto:k.drummond528@gmail.com) with any questions, comm
 Checkout my [GitHub](https://github.com/kdrummond528)!
 
 View [My Portfolio](https://kdrummond528.github.io/Personal-Portfolio/)!
+
+[Back to top](#coding-quiz)
